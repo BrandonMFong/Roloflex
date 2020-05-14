@@ -16,6 +16,8 @@ foreach($row in $CSVFile)
         insert into contacts values (@id, uuid(), '$($row.FirstName)', '$($row.LastName)', '$($row.Email)', '$($row.Phone)');
     ";
     $mycommand.CommandText = $querystring;
+    # something is probably wrong with the query I am passing
+    # the query works from the gui but not through here
     $myreader = $mycommand.ExecuteReader();
     while($myreader.Read()){ $myreader.GetString(0); }
 }
