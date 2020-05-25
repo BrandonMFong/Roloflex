@@ -1,0 +1,15 @@
+{
+    "Destination": "C:\\xampp\\htdocs\\",
+    "Source": "B:\\SOURCES\\Repos\\Roloflex",
+    "SiteName": "Roloflex",
+    "DefaultBrowserPath": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+    "URL": "Localhost",
+    "Exclude": [
+        ".git",
+        ".vscode",
+        ".well-known",
+        "archive",
+        ".gitignore",
+        ".DS_Store"
+    ]
+}
