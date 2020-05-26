@@ -1,3 +1,7 @@
 vc-roloflex.code-workspace
 imports/*
 link.txt
+Application.xml
+Env.xml
+ssh.json
+*.log

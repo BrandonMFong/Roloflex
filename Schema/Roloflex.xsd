@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+   <!-- FTP -->
+   <xs:element name="Site">
+        <xs:element name="Environment"/>
+
+        <!-- FTP -->
+        <xs:element name="Destination">
+            <xs:attribute name="Name"/>
+            <xs:element name="Site"/>
+            <xs:element name="Processes">
+                <xs:element name="Process">
+                    <xs:element name="Tag"/>
+                    <xs:element name="LCD"/>
+                    <xs:element name="CD"/>
+                    <xs:element name="Package"/>
+                </xs:element>
+            </xs:element>
+        </xs:element>
+        
+        <!-- Environment Credentials -->
+        <xs:element name="Variables">
+            <xs:element name="Variable">
+                <xs:attribute name="Environment"/>
+                <xs:element name="Servername"/>
+                <xs:element name="Username"/>
+                <xs:element name="Password"/>
+                <xs:element name="Database"/>
+            </xs:element>
+        </xs:element>
+    </xs:element>
+</xs:schema>

@@ -11,10 +11,15 @@
     <p><a href="/Roloflex">Home</a></p>
     <!-- <p><a href="/">Home</a></p> -->
     <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "roloflex";
+        include '../functions/GetEnvVar.php';
+        $GLOBALS['XMLReader'] = simplexml_load_string($_SESSION['XMLReader-String']);
+        $GLOBALS['Env'] = simplexml_load_string($_SESSION['Env-String']);
+        
+        $creds = GetCorrectEnvironment($GLOBALS['Env']->Environment);
+        $servername = $creds->Servername;
+        $username = $creds->Username;
+        $password = $creds->Password;
+        $dbname = $creds->Database;
         
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
