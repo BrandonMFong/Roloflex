@@ -24,21 +24,19 @@
           die("Connection failed: " . $conn->connect_error);
         }
         
-        $sql = "select * from contacts";
+        $sql = "select * from passwords";
         $result = $conn->query($sql);
         
         echo "<table style=\"width:100%\">";
-        echo "<tr><th>Firstname</th><th>Lastname</th><th>Email</th><th>Phonenumber</th></tr>";
+        echo "<tr><th>Description</th><th>Password</th></tr>";
             if ($result->num_rows > 0) 
             {
                 // output data of each row
                 while($row = $result->fetch_assoc()) 
                 {
                     echo "<tr>";
-                    echo "<td>" . $row['FirstName'] . "</td>";
-                    echo "<td>" . $row['LastName'] . "</td>";
-                    echo "<td>" . $row['Email'] . "</td>";
-                    echo "<td>" . $row['Phone'] . "</td>";
+                    echo "<td>" . $row['Description'] . "</td>";
+                    echo "<td>" . $row['Value'] . "</td>";
                     echo "</tr>";
                 }
             } 
